@@ -134,7 +134,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-form{
+section{
     width: 370px;
     padding: 2rem;
     display: grid;
