@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.card-container{
+    background: url('images/bg-main-desktop.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+}
+
+.card-back,
+.card-front{
+    width: 380px;
+    height: 200px;
+    padding: 2rem;
+    /* aspect-ratio: 16/10; */
+    border-radius: .5rem;
+    position: absolute;
+    background-size: 100%;
+}
+
+.card-front{
+    background: url('images/bg-card-front.png') no-repeat;
+    top: 20%;
+    left: 50%;
+}
+
+.card-num{
+    position: absolute;
+    top: 100px;
+    /* font-weight: 500; */
+    font-size: 1.5rem;
+}
+
+.card-back{
+    background: url('images/bg-card-back.png') no-repeat;
+    top: 52%;
+    left: 65%;
+}
+
+.card-num{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 55%;
+    /* text-align: center; */
+    left:8%;
+    /* margin: auto; */
+}
+.card-name{
+ font-size: .7rem;
+ position: absolute;
+ bottom: 1rem;
+ left: 1rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+}
+.card-exp{
+    font-size: .7rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-cvc{
+    font-size: .7rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-front::before{
+    content: '';
+    height: 2.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+.card-front::after{
+    content: '';
+    height: 1rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 1px solid #fff;
+    /* background-color: #fff; */
+    position: absolute;
+    top: calc(1.5rem + 0.75rem);
+    left: 5rem;
+}
+
+.background-right{
+    position: relative;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form{
+    width: 370px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+}
+
+label{
+    font-size: 0.5rem;
+    color:hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+input{
+    padding: .75rem .5rem;
+    width: 100%;
+    text-transform: capitalize;
+    position: relative;
+    border-radius: .5rem;
+    border: 2px solid hsl(270, 3%, 87%) ;
+}
+
+
+
+input::placeholder{
+    color:  hsl(279, 6%, 55%);
+    text-transform: none;
+    font-weight: 500;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+}
+
+.form-date-cvc{
+    display: flex;
+}
+
+.dates{
+    width: 50%;
+}
+
+#exp-date-mm,
+#exp-date-yy{
+    width: 40%;
+}
+
+.cvc{
+    width: 50%;
+}
+
+button{
+    height: 2.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:active{
+    scale: 0.99;
+    cursor: pointer;
+}
+
+#btn-cof{
+    text-align: center;
+    margin: auto;
+    width: 320px;
+}
+
+.card-complete{
+    width: 300px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card-complete h2{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.card-complete p{
+    font-size: .8rem;
+    font-weight: 500;
+    color: hsl(279, 6%, 55%);
+}
+
+.btn-con{
+    width: 100%;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+
+.form-name,
+.form-number,
+.dates,
+.cvc{
+    position: relative;
+}
+
+.warning{
+    color: red;
+    position: absolute;
+    bottom: -.7rem;
+    left: 0;
+    display: block;
+    font-size: .5rem;
+}
+
+.warning::before{
+    content: '🛑 ';
+}
+
+#no-name,
+#no-card-number,
+#no-cvc,
+#wrong-date{
+    bottom: -1.2rem;
+}
