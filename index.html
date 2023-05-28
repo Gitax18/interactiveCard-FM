@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -49,7 +50,7 @@
         <section>
 
           <div class="form-name">
-            <label for="cardholder">Cardholder Name</label> <br>
+            <label for="cardholder-name">Cardholder Name</label> <br>
             <!-- warning -->
             <span class="warning hidden" id="no-name">Can't be blank</span>
             <span class="warning hidden" id="no-name-number">Wrong format, letter only</span>
@@ -64,18 +65,18 @@
             <span class="warning hidden" id="no-card-letter">Wrong format, numbers / space only</span>
 
             <label for="card-form-num">card number</label> <br>
-            <input type="text" name="card-form-num" id="card-form-num" placeholder="e.g. 1234 5678 9012 3456">
+            <input type="text" name="card-form" id="card-form-num" placeholder="e.g. 1234 5678 9012 3456">
           </div>
           
           <div class="form-date-cvc">
             <div class="dates">
-              <label for="exp-date">Exp. date (MM/YY)</label> <br>
+              <label for="exp-date-mm">Exp. date (MM/YY)</label> <br>
               <!-- warning -->
               <span class="warning hidden" id="no-date">Can't be blank</span>
               <span class="warning hidden" id="wrong-date">Wrong date entry</span>
 
               <input type="number" name="exp-date" id="exp-date-mm" placeholder="MM">
-              <input type="number" name="exp-date" id="exp-date-yy" placeholder="YY">
+              <input type="number" name="exp-date-2" id="exp-date-yy" placeholder="YY">
             </div>
             
             <div class="cvc">
@@ -88,14 +89,14 @@
             </div>
           </div>
           <!-- type="submit" onsubmit="confirmButton(); return false;" -->
+          <button type="button" id="btn-cof">Confirm</button>
         </section>
-        <button type="button" id="btn-cof">Confirm</button>
       </div>
       
 
       <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
       <div class="card-complete hidden">
-        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/> <stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
         <h2>THANK YOU!</h2>
         <p>We've added your card details</p>
         <button class="btn-con" id="btn-con">Continue</button>
