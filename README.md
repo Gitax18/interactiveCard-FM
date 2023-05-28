@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution page](https://www.frontendmentor.io/solutions/interactive-card-details-grids-postioning-and-form-validation-COMC1WMhZW)
+- Live Site URL: [Live Site](https://interactive-card-git.netlify.app/)
 
 ## My process
 
