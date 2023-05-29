@@ -99,7 +99,7 @@ function checkFormValidity(){
         // ------------------------------------------------ 
     } else if (formDateMM.value < 1 // month must not be less than 1
     || formDateMM.value > 12  // month must not be greater than 12 
-    || formDateYY.value < 01  // year must not be less 2023
+    || formDateYY.value < 1  // year must not be less 2023
     || formDateYY.value > 99 // year must not be greater than 2053 (30 years limit)
     || formDateMM.value.length !== 2 // month format must contains only 2 digits (eg: 04 correct, 4 incorrect)
     || formDateYY.value.length !== 2    ){ // year format validity just like above
