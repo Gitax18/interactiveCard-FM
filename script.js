@@ -137,7 +137,9 @@ function checkFormValidity(){
     return detailsCorrect
 }
 
-btnCof.addEventListener('click', function(){
+btnCof.addEventListener('click', function(e){
+    e.preventDefault()
+
     const isDetailsCorrect = checkFormValidity()
     if (isDetailsCorrect){
         cardName.innerHTML = String(cardholder.value)
